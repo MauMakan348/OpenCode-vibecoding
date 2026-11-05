@@ -19,52 +19,52 @@
 
 ## 2. Database
 
-- [ ] Buat modul koneksi database SQLite.
-- [ ] Buat inisialisasi tabel `Item`.
-- [ ] Buat inisialisasi tabel `Loan`.
-- [ ] Definisikan primary key dan foreign key.
-- [ ] Aktifkan foreign key SQLite pada setiap koneksi.
-- [ ] Tambahkan constraint dasar untuk stok, quantity, dan status.
-- [ ] Pastikan database dan tabel dapat dibuat tanpa error.
+- [x] Buat modul koneksi database SQLite.
+- [x] Buat inisialisasi tabel `Item`.
+- [x] Buat inisialisasi tabel `Loan`.
+- [x] Definisikan primary key dan foreign key.
+- [x] Aktifkan foreign key SQLite pada setiap koneksi.
+- [x] Tambahkan constraint dasar untuk stok, quantity, dan status.
+- [x] Pastikan database dan tabel dapat dibuat tanpa error.
 
 ## 3. Data Access Layer
 
-- [ ] Buat repository untuk entitas `Item`.
-- [ ] Implementasikan penyimpanan item baru.
-- [ ] Implementasikan pengambilan seluruh item.
-- [ ] Implementasikan pengambilan item berdasarkan ID.
-- [ ] Implementasikan pengurangan stok secara bersyarat.
-- [ ] Implementasikan penambahan stok.
-- [ ] Buat repository untuk entitas `Loan`.
-- [ ] Implementasikan pembuatan transaksi pinjaman.
-- [ ] Implementasikan pencarian transaksi berdasarkan ID.
-- [ ] Implementasikan pembaruan status transaksi.
-- [ ] Implementasikan pengambilan riwayat berdasarkan NIM.
-- [ ] Gunakan parameterized query pada seluruh query yang menerima input.
+- [x] Buat repository untuk entitas `Item`.
+- [x] Implementasikan penyimpanan item baru.
+- [x] Implementasikan pengambilan seluruh item.
+- [x] Implementasikan pengambilan item berdasarkan ID.
+- [x] Implementasikan pengurangan stok secara bersyarat.
+- [x] Implementasikan penambahan stok.
+- [x] Buat repository untuk entitas `Loan`.
+- [x] Implementasikan pembuatan transaksi pinjaman.
+- [x] Implementasikan pencarian transaksi berdasarkan ID.
+- [x] Implementasikan pembaruan status transaksi.
+- [x] Implementasikan pengambilan riwayat berdasarkan NIM.
+- [x] Gunakan parameterized query pada seluruh query yang menerima input.
 
 ## 4. Service Layer dan Business Logic
 
 ### 4.1 Item Service
 
-- [ ] Validasi nama alat wajib diisi.
-- [ ] Validasi `total_stock` berupa bilangan bulat non-negatif.
-- [ ] Inisialisasi `available_stock` sama dengan `total_stock`.
-- [ ] Implementasikan layanan untuk menampilkan daftar alat.
-- [ ] Implementasikan layanan untuk menambahkan alat.
+- [x] Validasi nama alat wajib diisi.
+- [x] Validasi `total_stock` berupa bilangan bulat non-negatif.
+- [x] Inisialisasi `available_stock` sama dengan `total_stock`.
+- [x] Implementasikan layanan untuk menampilkan daftar alat.
+- [x] Implementasikan layanan untuk menambahkan alat.
 
 ### 4.2 Loan Service
 
-- [ ] Validasi `student_id`, `item_id`, dan `quantity`.
-- [ ] Pastikan `quantity` berupa bilangan bulat positif.
-- [ ] Pastikan item tersedia di database.
-- [ ] Tolak peminjaman jika stok tidak mencukupi.
-- [ ] Kurangi stok dan buat transaksi `BORROWED` dalam satu transaksi database.
-- [ ] Lakukan rollback jika proses peminjaman gagal.
-- [ ] Pastikan transaksi pengembalian ditemukan.
-- [ ] Tolak pengembalian jika status sudah `RETURNED`.
-- [ ] Ubah status menjadi `RETURNED` dan pulihkan stok dalam satu transaksi database.
-- [ ] Lakukan rollback jika proses pengembalian gagal.
-- [ ] Implementasikan pengambilan riwayat peminjaman berdasarkan NIM.
+- [x] Validasi `student_id`, `item_id`, dan `quantity`.
+- [x] Pastikan `quantity` berupa bilangan bulat positif.
+- [x] Pastikan item tersedia di database.
+- [x] Tolak peminjaman jika stok tidak mencukupi.
+- [x] Kurangi stok dan buat transaksi `BORROWED` dalam satu transaksi database.
+- [x] Lakukan rollback jika proses peminjaman gagal.
+- [x] Pastikan transaksi pengembalian ditemukan.
+- [x] Tolak pengembalian jika status sudah `RETURNED`.
+- [x] Ubah status menjadi `RETURNED` dan pulihkan stok dalam satu transaksi database.
+- [x] Lakukan rollback jika proses pengembalian gagal.
+- [x] Implementasikan pengambilan riwayat peminjaman berdasarkan NIM.
 
 ## 5. API Routes
 
