@@ -35,3 +35,7 @@ def register_error_handlers(app):
     @app.errorhandler(405)
     def handle_method_not_allowed(error):
         return jsonify({"error": "Method not allowed"}), 405
+
+    @app.errorhandler(500)
+    def handle_internal_error(error):
+        return jsonify({"error": "Internal server error"}), 500

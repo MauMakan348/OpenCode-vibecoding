@@ -114,13 +114,13 @@
 
 ## 7. Final Verification
 
-- [ ] Jalankan seluruh pengujian.
-- [ ] Periksa konsistensi stok setelah beberapa transaksi peminjaman dan pengembalian.
-- [ ] Periksa seluruh endpoint menggunakan Postman.
-- [ ] Pastikan tidak ada error yang belum ditangani.
-- [ ] Periksa struktur proyek dan hapus kode yang tidak digunakan.
-- [ ] Perbarui dokumentasi cara instalasi dan menjalankan aplikasi.
-- [ ] Pastikan implementasi sesuai dengan `requirement.md`, `prd.md`, dan `architecture.md`.
+- [x] Jalankan seluruh pengujian.
+- [x] Periksa konsistensi stok setelah beberapa transaksi peminjaman dan pengembalian.
+- [x] Periksa seluruh endpoint menggunakan Postman.
+- [x] Pastikan tidak ada error yang belum ditangani.
+- [x] Periksa struktur proyek dan hapus kode yang tidak digunakan.
+- [x] Perbarui dokumentasi cara instalasi dan menjalankan aplikasi.
+- [x] Pastikan implementasi sesuai dengan `requirement.md`, `prd.md`, dan `architecture.md`.
 
 ## 8. Definition of Done
 
