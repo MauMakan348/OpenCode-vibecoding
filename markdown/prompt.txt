@@ -4,3 +4,6 @@ semua file markdown, masukkan ke satu folder baru di root project, dengan nama f
 lanjutkan task kedua dan beri konfirmasinya
 lanjutkan task ketiga dan beri konfirmasinya
 lanjutkan task keempat dan beri konfirmasinya
+lanjutkan task ke-5 dan beri konfirmasinya
+lanjutkan task ke-6 dan beri konfirmasinya
+lanjutkan task ke-7 dan beri konfirmasinya

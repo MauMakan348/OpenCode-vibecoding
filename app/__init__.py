@@ -16,8 +16,14 @@ def create_app(test_config=None):
 
     os.makedirs(app.instance_path, exist_ok=True)
 
-    from app import database
+    from app import database, errors
+    from app.routes.item_routes import bp as item_blueprint
+    from app.routes.loan_routes import bp as loan_blueprint
 
     database.init_app(app)
+    errors.register_error_handlers(app)
+
+    app.register_blueprint(item_blueprint)
+    app.register_blueprint(loan_blueprint)
 
     return app
