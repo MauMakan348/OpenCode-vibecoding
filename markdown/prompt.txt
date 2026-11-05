@@ -1,0 +1,3 @@
+baca dan pelajari 2 file markdown saya tanpa membuat kode apapun
+lanjutkan task pertama dan beri konfirmasinya
+semua file markdown, masukkan ke satu folder baru di root project, dengan nama folder markdown
