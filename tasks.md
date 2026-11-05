@@ -10,12 +10,12 @@
 
 ## 1. Project Setup
 
-- [ ] Buat struktur direktori proyek sesuai `architecture.md`.
-- [ ] Siapkan virtual environment Python.
-- [ ] Buat `requirements.txt` dan tambahkan Flask.
-- [ ] Buat entry point aplikasi (`run.py`).
-- [ ] Buat konfigurasi dasar aplikasi Flask.
-- [ ] Pastikan aplikasi dapat dijalankan secara lokal.
+- [x] Buat struktur direktori proyek sesuai `architecture.md`.
+- [x] Siapkan virtual environment Python.
+- [x] Buat `requirements.txt` dan tambahkan Flask.
+- [x] Buat entry point aplikasi (`run.py`).
+- [x] Buat konfigurasi dasar aplikasi Flask.
+- [x] Pastikan aplikasi dapat dijalankan secara lokal.
 
 ## 2. Database
 
