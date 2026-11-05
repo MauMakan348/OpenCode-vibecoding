@@ -77,3 +77,24 @@ def test_failed_loan_does_not_change_stock(client, item):
     assert items[0]["available_stock"] == 10
     history = client.get("/loans/student/20240001").get_json()["data"]
     assert history == []
+
+
+def test_loan_rolls_back_stock_when_record_creation_fails(
+    client, item, monkeypatch
+):
+    from app.repositories import loan_repository
+
+    def boom(*args, **kwargs):
+        raise RuntimeError("simulated failure")
+
+    monkeypatch.setattr(loan_repository, "create_loan", boom)
+
+    with pytest.raises(RuntimeError):
+        client.post(
+            "/loans",
+            json={"student_id": "20240001", "item_id": item["id"], "quantity": 4},
+        )
+
+    items = client.get("/items").get_json()["data"]
+    assert items[0]["available_stock"] == 10
+    assert client.get("/loans/student/20240001").get_json()["data"] == []

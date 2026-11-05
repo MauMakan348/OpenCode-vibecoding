@@ -1,3 +1,6 @@
+import pytest
+
+
 def _create_loan(client, item, quantity=3):
     response = client.post(
         "/loans",
@@ -59,3 +62,23 @@ def test_double_return_does_not_increase_stock(client, item):
     client.put(f"/loans/{loan['id']}/return")
 
     assert _available_stock(client) == 10
+
+
+def test_return_rolls_back_status_when_stock_restore_fails(
+    client, item, monkeypatch
+):
+    from app.repositories import item_repository
+
+    loan = _create_loan(client, item, quantity=4)
+
+    def boom(*args, **kwargs):
+        raise RuntimeError("simulated failure")
+
+    monkeypatch.setattr(item_repository, "increment_available_stock", boom)
+
+    with pytest.raises(RuntimeError):
+        client.put(f"/loans/{loan['id']}/return")
+
+    history = client.get("/loans/student/20240001").get_json()["data"]
+    assert history[0]["status"] == "BORROWED"
+    assert _available_stock(client) == 6
